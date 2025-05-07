@@ -12,7 +12,7 @@ if (!cached) {
   cached = global.mongoose = { conn: null, promise: null }
 }
 
-export async function connectToDatabase() {
+export const connectToDatabase=()=> {
   // If connection already exists, return it
   if (cached.conn) return cached.conn
 
